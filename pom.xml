@@ -6,7 +6,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>java16</artifactId>
     <name>java16</name>
-    <url>http://www.terheyden.com</url>
 
     <properties>
         <java.version>16</java.version>
@@ -160,7 +159,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.terheyden.archetypes.MainApp</mainClass>
+                                    <mainClass>com.terheyden.MainApp</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
@@ -171,17 +170,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <!-- When we're built, don't include our logback.xml (libraries only) -->
-            <!-- https://maven.apache.org/plugins/maven-jar-plugin/ -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <excludes>
-                        <exclude>**/logback.xml</exclude>
-                    </excludes>
-                </configuration>
             </plugin>
         </plugins>
 
